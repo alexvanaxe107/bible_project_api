@@ -1,5 +1,5 @@
 {
-    description = "This is the bible project."
+    description = "This is the bible project.";
 
     inputs = {
     };
