@@ -1,10 +1,14 @@
 from pydantic import BaseModel
 
-
 class VerseBase(BaseModel):
     chapter: int
     verse: int
     text: str
+
+
+class BookBase(BaseModel):
+    name:  str
+    acronym: str
 
 
 class Verse(VerseBase):
@@ -12,12 +16,7 @@ class Verse(VerseBase):
     book_id: int
 
     class Config:
-        orm_mode = True
-
-
-class BookBase(BaseModel):
-    name:  str
-    acronym: str
+        from_attributes = True
 
 
 class Book(BookBase):
@@ -28,7 +27,7 @@ class Book(BookBase):
     verses: list[Verse] = []
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 
 class TestamentBase(BaseModel):
@@ -40,4 +39,4 @@ class Testament(TestamentBase):
     id: int
 
     class Config:
-        orm_mode = True
+        from_attributes = True
