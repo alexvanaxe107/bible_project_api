@@ -1,3 +1,4 @@
+/api/app/.pg/
 /api/.pg/
 /api/.s.*
 /api/.venv
