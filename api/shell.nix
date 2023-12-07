@@ -3,7 +3,7 @@
 
   pkgs.mkShell {
     # nativeBuildInputs is usually what you want -- tools you need to run
-    nativeBuildInputs = with pkgs.buildPackages; [ python3 sqlite postgresql ];
+    nativeBuildInputs = with pkgs.buildPackages; [ python3 sqlite postgresql postgresql.lib ];
 
 
     # LD_LIBRARY_PATH = "${geos}/lib:${gdal}/lib";
