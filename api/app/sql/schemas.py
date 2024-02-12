@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 
+
 class VerseBase(BaseModel):
     chapter: int
     verse: int
@@ -14,6 +15,8 @@ class BookBase(BaseModel):
 class Verse(VerseBase):
     id: int
     book_id: int
+
+    books: BookBase
 
     class Config:
         from_attributes = True

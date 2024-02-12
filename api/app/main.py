@@ -5,7 +5,6 @@ from fastapi.middleware.cors import CORSMiddleware
 from sql import crud, models, schemas
 from sql.database import SessionLocal, engine
 
-
 models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
