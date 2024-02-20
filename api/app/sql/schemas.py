@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 
 
 class VerseBase(BaseModel):
@@ -18,8 +18,7 @@ class Verse(VerseBase):
 
     books: BookBase
 
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)
 
 
 class Book(BookBase):
@@ -29,8 +28,7 @@ class Book(BookBase):
 
     verses: list[Verse] = []
 
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)
 
 
 class TestamentBase(BaseModel):
@@ -41,5 +39,4 @@ class TestamentBase(BaseModel):
 class Testament(TestamentBase):
     id: int
 
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)

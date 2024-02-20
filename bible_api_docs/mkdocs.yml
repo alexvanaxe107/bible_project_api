@@ -1,0 +1,5 @@
+site_name: Bible Project/api
+
+nav:
+  - Home: index.md
+  - Roadmap: roadmap.md

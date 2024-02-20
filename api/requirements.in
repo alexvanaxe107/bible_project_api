@@ -3,3 +3,7 @@ uvicorn
 SQLAlchemy
 psycopg2
 psycopg2-binary
+mkdocs
+flake8
+httpx
+pytest
