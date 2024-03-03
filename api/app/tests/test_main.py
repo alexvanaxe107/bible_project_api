@@ -36,7 +36,7 @@ app.dependency_overrides[get_db] = override_get_db
 @fixture()
 def populate_db():
     # For now for some unknown reason we have to put this two lines, since the pg_dump generates a file
-    # that violates it's own import
+    # that violates it's own import. We will need to revisit this file.
     os.system("psql --host=localhost bible_project_test < data/ara.psql.sql")
     os.system("psql --host=localhost bible_project_test < data/ara.psql.sql")
     yield
